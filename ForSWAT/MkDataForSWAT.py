@@ -4,6 +4,22 @@ Created on Mon Mar 22 22:04:26 2021
 
 @author: Albert
 """
+"""
+ ----------------------------------------------------------------
+|   forcing Data    |   source-unit     |   destination-unit    |
+----------------------------------------------------------------
+|   precipitation   |   mm hr-1         |   mm d-1              |
+----------------------------------------------------------------
+|   humidity        |   sh              |   %                   |
+----------------------------------------------------------------
+|   sr              |   W m-2           |   rh                  |
+----------------------------------------------------------------
+|   wind            |   m s-1           |   m s-1               |
+----------------------------------------------------------------
+|   tmp            |   K                |   C                   |
+----------------------------------------------------------------
+"""
+
 import geopandas as gpd
 import rioxarray as rioxr
 import rasterio
@@ -181,7 +197,7 @@ def extract_elevation_func(coords=[(95, 35)]):
         
 def extract_elevation():
     """
-    提取范围内各个栅格的数据的高程值
+    提取范围内各个栅格的数据的高程值,并将生成的文件做为生成其他气象要素fork文件的模板
     """
     mask_filepath    = r'I:/Qinghai_Tibet_Plateau/swat_data/project_Changjiangyuan/studyArea/MaskForITPCAS/MaskForITPCAS.nc'
     mask = xr.open_dataarray(mask_filepath)
