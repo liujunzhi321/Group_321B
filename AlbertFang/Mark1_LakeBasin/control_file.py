@@ -91,25 +91,6 @@ elif platform.system() == 'Linux':
 
 # 计算比例的话应当注明 cmap, type_list，即原数据的土地利用类型和需要统计的土地利用类型
 STAT_CONTROL_DICT = {
-    # 'Land cover classes'      : [r'I:\Data\土地利用\china_v31.tif', 'majority'],
-    # 'Soil erosion 1992'       : [r'I:\Data\土壤侵蚀\XDA200402022-QZGY1992E.tif', 'mean'],
-    # 'Soil erosion 2005'       : [r'I:\Data\土壤侵蚀\XDA200402022-QZGY2005E.tif', 'mean'],
-    # 'Soil erosion 2015'       : [r'I:\Data\土壤侵蚀\XDA200402022-QZGY2015E.tif', 'mean'],
-
-    # 'Permafrost'              : [r'I:\Data\冻土\tif1.tif', 'mean'], # PFI_NoFringe1.tif,
-    # 'Wetland'                 : [r'I:\Data\湿地\wetland2000s1.tif', 'percent', ['wetland_1', 'wetland_2']],
-    #'TP_LC2015'               : [r'I:\Data\土地利用\TP\tpluc20151.tif', 'percent', cmap_lu_tp, 'all'],
-    # 'TP_LC2015'                 : {'rst_fp': r'I:\Data\土地利用\TP\tpluc20151.tif', "categorical": True, 'cmap': cmap_lu_tp, 'stated_type_list': 'All'},
-    # 'TP_LC2005'               : [r'I:\Data\土地利用\TP\tpluc20051.tif', 'percent', cmap_lu_tp, 'all'],
-    # 'TP_LC1992'               : [r'I:\Data\土地利用\TP\tpluc19921.tif', 'percent', cmap_lu_tp, 'all'],
-    # 'PET'                     : [r'I:\Data\PET\pet_he_yr1.tif', 'mean'],
-    # 'AET'                     : [r'I:\Data\ActualEvapotranspiration\aet_yr1.tif', 'mean'],
-    # 'LST_day_m2s'             : [r'I:\Data\LST\LST_Day_1km_mean.tif', 'mean'],
-    # 'LST_night_m2s'           : [r'I:\Data\LST\LST_Night_1km_mean.tif', 'mean'],
-    # 'LST_day_allYear'         : [r'I:\Data\LST\LST_Day_1km_AllYear_mean.tif', 'mean'],
-    # 'LST_night_AllYear'       : [r'I:\Data\LST\LST_Night_1km_AllYear_mean.tif', 'mean'],
-    # 'Wind_speed'              : [r'I:\foring_data_of_China_1979-2018\数据整合\wind_mean_TP.tif', 'mean']
-
     # 'Elevation'                 : {'rst_fp': r'I:\Qinghai_Tibet_Plateau\DEM\TPDEM\tp_extent_dem.tif', 'categorical': False, 'c_stat_ways': ['mean', 'min', 'max'], 'w_stat_ways': ['mean']},
     'HFP'                       : {'rst_fp': r'J:\Data\ATLAS\anthropogenic\HumanFootprint\HFP2009.tif', 'categorical': False, 'c_stat_ways': ['mean', 'min', 'max'], 'w_stat_ways': ['mean']}
 }
