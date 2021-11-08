@@ -76,18 +76,18 @@ CMAP_DICT = {
 # 矢量范围， 湖泊的本地流域和完整流域
 if platform.system() == "Windows":
     EXTENT_VEC_DICT = {
-        'catchment' : r'J:\Data\shapefile\catchment\catchment.shp',
-        'watershed' : r'J:\Data\shapefile\watershed\watershed.shp'
+        'catchment' : r'J:\Data\shapefile\BaseData_20211107\LocalCatchment\local_catchment_albers.shp',
+        'watershed' : r'J:\Data\shapefile\BaseData_20211107\UpstreamWatershed\upstream_watershed_albers.shp'
         }
     OUTPUT_FP = r'J:\WshdAttributes\Result\Updates\Updates-{}.xlsx'.format(datetime.datetime.now().strftime('%Y%m%d%H%M%S'))
 
 elif platform.system() == 'Linux':
+    fd = r'/share/home/liujunzhi/liujunzhi/Albert/mycode/Mark17_GetUpstreamAttri/Data/shapefile/BaseData_20211107'
     EXTENT_VEC_DICT = {
-        'catchment' : r'/share/home/liujunzhi/liujunzhi/Albert/mycode/Mark17_GetUpstreamAttri/Data/shapefile/catchment/catchment.shp',
-        'watershed' : r'/share/home/liujunzhi/liujunzhi/Albert/mycode/Mark17_GetUpstreamAttri/Data/shapefile/watershed/watershed.shp'
+        'catchment' : os.path.join(fd, r'LocalCatchment/local_catchment_albers.shp'),
+        'watershed' : os.path.join(fd, r'UpstreamWatershed/upstream_watershed_albers.shp'),
         }
     OUTPUT_FP = r'/share/home/liujunzhi/liujunzhi/Albert/mycode/Mark17_GetUpstreamAttri/Result/Updates/Updates-{}.xlsx'.format(datetime.datetime.now().strftime('%Y%m%d%H%M%S'))
-
 
 # 计算比例的话应当注明 cmap, type_list，即原数据的土地利用类型和需要统计的土地利用类型
 STAT_CONTROL_DICT = {
@@ -98,9 +98,9 @@ STAT_CONTROL_DICT = {
 
 def mk_control_dict():
     if platform.system() == "Windows":
-        fp = r'D:\Easy\my_code\Mark17_GetUpstreamAttri\control_table_windows.csv'
+        fp = r'D:\Easy\my_code\Group_321B\AlbertFang\Mark1_LakeBasin\control_table_windows_20211108.csv'
     elif platform.system() == 'Linux':
-        fp = r'/share/home/liujunzhi/liujunzhi/Albert/mycode/Mark17_GetUpstreamAttri/control_table_linux.csv'
+        fp = r'/share/home/liujunzhi/liujunzhi/Albert/mycode/Mark17_GetUpstreamAttri/control_table_linux_20211108.csv'
     
     df = pd.read_csv(fp)
     control_table = df.set_index('attribute_name').T.to_dict('dict')
