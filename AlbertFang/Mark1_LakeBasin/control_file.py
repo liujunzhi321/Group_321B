@@ -100,7 +100,7 @@ def mk_control_dict():
     if platform.system() == "Windows":
         fp = r'D:\Easy\my_code\Group_321B\AlbertFang\Mark1_LakeBasin\control_table_windows_20211108.csv'
     elif platform.system() == 'Linux':
-        fp = r'/share/home/liujunzhi/liujunzhi/Albert/mycode/Mark17_GetUpstreamAttri/control_table_linux_20211108_p1.csv'
+        fp = r'/share/home/liujunzhi/liujunzhi/Albert/mycode/Group_321B/AlbertFang/Mark1_LakeBasin/control_table_linux_20211108_p1.csv'
     
     df = pd.read_csv(fp)
     control_table = df.set_index('attribute_name').T.to_dict('dict')
