@@ -52,11 +52,11 @@ class WatershedStatsZonal():
         # self.watershed_vec_fp = r'J:\Data\shapefile\watershed\watershed.shp'
         # 将矢量的数据投影坐标系转化为与栅格相同的投影
         if platform.system() == "Windows":
-            temp_rst_fd = r'J:\Data\TempData'
+            self.temp_rst_fd = r'J:\Data\TempData'
         elif platform.system() == 'Linux':
-            temp_rst_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterAlbers'
+            self.temp_rst_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterAlbers'
         fn_albers = '{}_albers.tif'.format(os.path.basename(self.rst_fp).split('.')[0])
-        self.target_rst_fp = os.path.join(temp_rst_fd, fn_albers)
+        self.target_rst_fp = os.path.join(self.temp_rst_fd, fn_albers)
 
 
     def transform(self, vec_fp):
@@ -106,7 +106,9 @@ class WatershedStatsZonal():
         """
         计算多个统计量
         """
-        self.transform_albers_rst()        
+        if os.path.basename(self.target_rst_fp) not in os.listdir(self.temp_rst_fd):
+            self.transform_albers_rst()
+
         vec_data = gpd.read_file(vec_fp)
         key_word_list = vec_data[self.key_word].values
 
@@ -124,7 +126,8 @@ class WatershedStatsZonal():
         """
         计算土地利用数据中，各个类型的面积
         """
-        self.transform_albers_rst() 
+        if os.path.basename(self.target_rst_fp) not in os.listdir(self.temp_rst_fd):
+            self.transform_albers_rst()
         vec_data = gpd.read_file(vec_fp)
         key_word_list = vec_data[self.key_word].values
         if self.stated_type_list == 'All':
@@ -144,6 +147,7 @@ class WatershedStatsZonal():
         stat_result_df.rename(columns=rename_dict, inplace=True)
         # print(stat_result_df.set_index(self.key_word))
         return stat_result_df.set_index(self.key_word)
+
 
     def set_prefix(self, df, extent):
         if isinstance(df, pd.DataFrame):
