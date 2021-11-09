@@ -1,0 +1,26 @@
+﻿attribute_name,rst_fp,categorical,cmap,stated_type_list,c_stat_ways,w_stat_ways,Unit
+Clay,/share/home/liujunzhi/liujunzhi/Albert/Data/soil/6.5  Clay content in % (kg  kg)/sol_clay.wfraction_usda.3a1a1a_m_250m_b0..0cm_1950..2017_v0.2.tif,FALSE,,,mean,mean,percent
+Sand,/share/home/liujunzhi/liujunzhi/Albert/Data/soil/6.6  Sand content in % (kg  kg)/sol_sand.wfraction_usda.3a1a1a_m_250m_b0..0cm_1950..2017_v0.2.tif,FALSE,,,mean,mean,percent
+SOC,/share/home/liujunzhi/liujunzhi/Albert/Data/soil/6.3  Soil organic carbon content in x 5 g  kg/sol_organic.carbon_usda.6a1c_m_250m_b0..0cm_1950..2017_v0.2.tif,FALSE,,,mean,mean,percent
+SWC_M01,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_1/hdr.adf,FALSE,,,mean,,percent
+SWC_M02,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_2/hdr.adf,FALSE,,,mean,,percent
+SWC_M03,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_3/hdr.adf,FALSE,,,mean,,percent
+SWC_M04,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_4/hdr.adf,FALSE,,,mean,,percent
+SWC_M05,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_5/hdr.adf,FALSE,,,mean,,percent
+SWC_M06,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_6/hdr.adf,FALSE,,,mean,,percent
+SWC_M07,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_7/hdr.adf,FALSE,,,mean,,percent
+SWC_M08,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_8/hdr.adf,FALSE,,,mean,,percent
+SWC_M09,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_9/hdr.adf,FALSE,,,mean,,percent
+SWC_M10,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_10/hdr.adf,FALSE,,,mean,,percent
+SWC_M11,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_11/hdr.adf,FALSE,,,mean,,percent
+SWC_M12,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_fr/swc_fr_12/hdr.adf,FALSE,,,mean,,percent
+SWC_YR,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_water_content/swc_fr/swc_yr.tif,FALSE,,,mean,mean,percent
+Lithological_class,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/Lithological/glim.tif,FALSE,,,majority,,classes(16)
+soil_erosion,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/soil/soil_erosion/XDA200402022-QZGY2015E.tif,FALSE,,,mean,mean,
+Population_count,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/anthropogenic/population_count/gpw_v4_population_count_rev11_2010_30_sec.tif,FALSE,,,mean,mean,
+Population_density,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/anthropogenic/population_density/gpw_v4_population_density_rev11_2010_30_sec.tif,FALSE,,,mean,mean,
+Urban_extent,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/anthropogenic/urban_extent/GHS_SMOD_POP2015_GLOBE_R2019A_54009_1K_V2_0.tif,TRUE,Urban_cmap,All,,,
+Nighttime_light,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/anthropogenic/nighttime_lights/F182013.v4c_web.stable_lights.avg_vis.tif,FALSE,,,mean,mean,
+Road_density,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/anthropogenic/road_density/road_density.tif,FALSE,,,mean,mean,
+Human_footprint_1993,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/anthropogenic/HumanFootprint/HFP1993.tif,FALSE,,,mean,mean,
+Human_footprint_2009,/share/home/liujunzhi/liujunzhi/Albert/Data/ATLAS/anthropogenic/HumanFootprint/HFP2009.tif,FALSE,,,mean,mean,
