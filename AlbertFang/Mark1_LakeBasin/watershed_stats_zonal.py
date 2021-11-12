@@ -50,13 +50,14 @@ class WatershedStatsZonal():
 
         # self.catchment_vec_fp = r'J:\Data\shapefile\catchment\catchment.shp'
         # self.watershed_vec_fp = r'J:\Data\shapefile\watershed\watershed.shp'
-        # 将矢量的数据投影坐标系转化为与栅格相同的投影
-        if platform.system() == "Windows":
-            self.temp_rst_fd = r'J:\Data\TempData'
-        elif platform.system() == 'Linux':
-            self.temp_rst_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterAlbers'
-        fn_albers = '{}_albers.tif'.format(os.path.basename(self.rst_fp).split('.')[0])
-        self.target_rst_fp = os.path.join(self.temp_rst_fd, fn_albers)
+
+        # # 将矢量的数据投影坐标系转化为与栅格相同的投影
+        # if platform.system() == "Windows":
+        #     self.temp_rst_fd = r'J:\Data\TempData'
+        # elif platform.system() == 'Linux':
+        #     self.temp_rst_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterAlbers'
+        # fn_albers = '{}_albers.tif'.format(os.path.basename(self.rst_fp).split('.')[0])
+        # self.target_rst_fp = os.path.join(self.temp_rst_fd, fn_albers)
 
 
     def transform(self, vec_fp):
@@ -72,20 +73,6 @@ class WatershedStatsZonal():
         rst_crs = rst.rio.crs
         vec = vec.to_crs(rst_crs)
         vec.to_file(self.temp_vec_fp)
-        return
-
-
-    def compress(path, target_path, method="LZW"):
-        """
-        使用gdal进行文件压缩，
-        LZW方法属于无损压缩，
-        效果非常给力，4G大小的数据压缩后只有三十多M
-        """
-        from osgeo import gdal
-        dataset = gdal.Open(path)
-        driver = gdal.GetDriverByName('GTiff')
-        driver.CreateCopy(target_path, dataset, strict=1, options=["TILED=YES", "COMPRESS={0}".format(method)])
-        del dataset
         return
 
 
@@ -106,13 +93,13 @@ class WatershedStatsZonal():
         """
         计算多个统计量
         """
-        if os.path.basename(self.target_rst_fp) not in os.listdir(self.temp_rst_fd):
-            self.transform_albers_rst()
+        # if os.path.basename(self.target_rst_fp) not in os.listdir(self.temp_rst_fd):
+        #     self.transform_albers_rst()
 
         vec_data = gpd.read_file(vec_fp)
         key_word_list = vec_data[self.key_word].values
 
-        stat_result = zonal_stats(vec_fp, self.target_rst_fp, stats=stat_ways, all_touched=True)
+        stat_result = zonal_stats(vec_fp, self.rst_fp, stats=stat_ways, all_touched=True)
         
         stat_result_df = pd.DataFrame(stat_result)
         rename_dict = {stat_way: '{}_{}'.format(attribute_name, stat_way) for stat_way in stat_ways}
@@ -126,8 +113,9 @@ class WatershedStatsZonal():
         """
         计算土地利用数据中，各个类型的面积
         """
-        if os.path.basename(self.target_rst_fp) not in os.listdir(self.temp_rst_fd):
-            self.transform_albers_rst()
+        # if os.path.basename(self.target_rst_fp) not in os.listdir(self.temp_rst_fd):
+        #     self.transform_albers_rst()
+
         vec_data = gpd.read_file(vec_fp)
         key_word_list = vec_data[self.key_word].values
         if self.stated_type_list == 'All':
@@ -135,8 +123,8 @@ class WatershedStatsZonal():
         else:
             type_list = self.stated_type_list.split(',')
 
-        stat_result = zonal_stats(vec_fp, self.target_rst_fp, categorical=True, all_touched=True, category_map=self.cmap)
-        count_sum   = zonal_stats(vec_fp, self.target_rst_fp, stats=['count', 'nodata'], all_touched=True, ) 
+        stat_result = zonal_stats(vec_fp, self.rst_fp, categorical=True, all_touched=True, category_map=self.cmap)
+        count_sum   = zonal_stats(vec_fp, self.rst_fp, stats=['count', 'nodata'], all_touched=True, ) 
 
         stat_result_df = pd.DataFrame(stat_result, columns=type_list)
         count_sum_df   = pd.DataFrame(count_sum)
