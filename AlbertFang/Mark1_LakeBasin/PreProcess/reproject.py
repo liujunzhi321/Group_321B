@@ -47,7 +47,7 @@ def compress(path, target_path, method="LZW"):
 
 
 def main():
-    fp = r'control_table_linux_20211108.csv'
+    fp = r'../control_table_linux_20211108.csv'
     temp_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers'
     df = pd.read_csv(fp).rst_fp
     for o_fp in df:
