@@ -47,7 +47,7 @@ def compress(path, target_path, method="LZW"):
 
 
 def main():
-    fp = r'../control_table_linux_20211108.csv'
+    fp = r'../control_table_linux_20211113_soilgrid.csv'
     temp_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers'
     df = pd.read_csv(fp).rst_fp.iloc[66:]
     for o_fp in df:
@@ -56,13 +56,13 @@ def main():
             basename = os.path.dirname(o_fp).split(r'/')[-1]
         albers_fp = os.path.join(temp_fd, r'{}_clipped_albers.tif'.format(basename))
         compress_fp = os.path.join(temp_fd, r"{}_com_clipped_albers.tif".format(basename))
-
+        print(compress_fp)
         # rst_fp = r'I:\foring_data_of_China_1979-2018\数据整合\Monthly\temp_M01_Mean_20210913.tif'
         # target_fp = r'J:\Data\TempData\temp_M01_Mean_20210913_clip_albers.tif'
         # target_compressed_fp = r'J:\Data\TempData\temp_M01_Mean_20210913_clip_compressed_albers.tif'
-        transform_albers_rst(o_fp, albers_fp)
-        compress(albers_fp, compress_fp)
-        os.remove(albers_fp)
+        # transform_albers_rst(o_fp, albers_fp)
+        # compress(albers_fp, compress_fp)
+        # os.remove(albers_fp)
 
 
 
