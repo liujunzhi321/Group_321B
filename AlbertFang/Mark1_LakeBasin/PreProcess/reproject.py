@@ -49,7 +49,7 @@ def compress(path, target_path, method="LZW"):
 def main():
     fp = r'../control_table_linux_20211108.csv'
     temp_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers'
-    df = pd.read_csv(fp).rst_fp
+    df = pd.read_csv(fp).rst_fp.iloc[66:]
     for o_fp in df:
         basename = os.path.splitext(os.path.basename(o_fp))[0]
         if basename == 'hdr':
