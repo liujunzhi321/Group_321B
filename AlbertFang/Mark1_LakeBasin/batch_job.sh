@@ -7,6 +7,6 @@
 #SBATCH --ntasks-per-node=2
 #SBATCH -p compute
 
-cd PreProcess
-python reproject.py
-# python main.py
+# cd PreProcess
+# python reproject.py
+python main.py
