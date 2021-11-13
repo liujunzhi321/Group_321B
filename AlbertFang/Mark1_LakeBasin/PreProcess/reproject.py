@@ -60,9 +60,10 @@ def main():
         # rst_fp = r'I:\foring_data_of_China_1979-2018\数据整合\Monthly\temp_M01_Mean_20210913.tif'
         # target_fp = r'J:\Data\TempData\temp_M01_Mean_20210913_clip_albers.tif'
         # target_compressed_fp = r'J:\Data\TempData\temp_M01_Mean_20210913_clip_compressed_albers.tif'
-        # transform_albers_rst(o_fp, albers_fp)
-        # compress(albers_fp, compress_fp)
-        # os.remove(albers_fp)
+        
+        transform_albers_rst(o_fp, albers_fp)
+        compress(albers_fp, compress_fp)
+        os.remove(albers_fp)
 
 
 
