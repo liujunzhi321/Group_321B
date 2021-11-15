@@ -23,7 +23,7 @@ def transform_albers_rst(rst_fp, target_rst_fp):
         None
     """
     tp_fp = r'/share/home/liujunzhi/liujunzhi/Albert/Data/DBATP/DBATP_Polygon.shp'
-    tp_fp = r'I:\Qinghai_Tibet_Plateau\青藏高原范围与界线数据\DBATP\DBATP\DBATP_Polygon.shp'
+    # tp_fp = r'I:\Qinghai_Tibet_Plateau\青藏高原范围与界线数据\DBATP\DBATP\DBATP_Polygon.shp'
     rst = rioxr.open_rasterio(rst_fp)
     print(rst.dtype)
     rst_crs = rst.rio.crs
