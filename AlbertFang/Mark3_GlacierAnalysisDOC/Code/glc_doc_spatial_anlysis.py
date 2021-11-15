@@ -92,7 +92,7 @@ def significant_correlation(x, y, scatter_plot_flag, plot_save_path, **args):
 
 
 def significant_correlation_std_main():
-    factor = 'LU'
+    factor = 'position'
     # Input parameters
     fp = r'Mean\All_type_data_mean_factors_20211112.xlsx'
     fp_output = r'Result\{}\与{}相关性_20211112.xlsx'.format(factor, factor)

@@ -59,7 +59,7 @@ TP_LC2015_extent,/share/home/liujunzhi/liujunzhi/Albert/Data/PreparedData/Landco
 VegType_class,/share/home/liujunzhi/liujunzhi/Albert/Data/PreparedData/Landcover/vegtype_5min.tif,FALSE,,,majority,,class(15),1,,
 VegType_extent,/share/home/liujunzhi/liujunzhi/Albert/Data/PreparedData/Landcover/vegtype_5min.tif,TRUE,VegType_cmap,All,,,class(15),30,,
 cropland,/share/home/liujunzhi/liujunzhi/Albert/Data/PreparedData/Landcover/Cropland2000_5m.tif,FALSE,,,mean,mean,%,2,,
-Permafrost,/share/home/liujunzhi/liujunzhi/Albert/Data/PreparedData/Landcover/permafrost.tif,FALSE,,,mean,mean,,2,,121
+Permafrost,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterAlbers/permafrost_albers.tif,FALSE,,,mean,mean,,2,,121
 wetland_class,/share/home/liujunzhi/liujunzhi/Albert/Data/PreparedData/Landcover/glwd_3_ProjectRaster11.tif,FALSE,,,majority,,%,,,
 wetland_extent,/share/home/liujunzhi/liujunzhi/Albert/Data/PreparedData/Landcover/glwd_3_ProjectRaster11.tif,TRUE,WetlandType_cmap,All,,,,,,
 Clay,/share/home/liujunzhi/liujunzhi/Albert/Data/soil/6.5  Clay content in % (kg  kg)/sol_clay.wfraction_usda.3a1a1a_m_250m_b0..0cm_1950..2017_v0.2.tif,FALSE,,,mean,mean,percent,,,
