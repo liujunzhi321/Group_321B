@@ -11,7 +11,7 @@ Author = Albert Fang
 from posixpath import dirname
 import rioxarray as rioxr
 import geopandas as gpd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import os
 import pandas as pd
 
@@ -24,10 +24,12 @@ def transform_albers_rst(rst_fp, target_rst_fp):
     """
     tp_fp = r'/share/home/liujunzhi/liujunzhi/Albert/Data/DBATP/DBATP_Polygon.shp'
     rst = rioxr.open_rasterio(rst_fp)
+    print(rst.dtype)
     rst_crs = rst.rio.crs
     tp_df = gpd.read_file(tp_fp).to_crs(rst_crs)
-    clipped = rst.rio.clip(tp_df.envelope).rio.reproject('ESRI:102025')
-    clipped.rio.to_raster(target_rst_fp)
+    print(tp_df.crs)
+    clipped = rst.rio.clip(tp_df.envelope, from_disk=True).rio.reproject('ESRI:102025')
+    clipped.rio.to_raster(target_rst_fp, compress='LZW')
     # # print(xds)
     return None
 
@@ -47,9 +49,10 @@ def compress(path, target_path, method="LZW"):
 
 
 def main():
+    print("AL")
     fp = r'../control_table_linux_20211113_soilgrid.csv'
     temp_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers'
-    df = pd.read_csv(fp).rst_fp.iloc[66:]
+    df = pd.read_csv(fp).rst_fp
     for o_fp in df:
         basename = os.path.splitext(os.path.basename(o_fp))[0]
         if basename == 'hdr':
@@ -57,13 +60,13 @@ def main():
         albers_fp = os.path.join(temp_fd, r'{}_clipped_albers.tif'.format(basename))
         compress_fp = os.path.join(temp_fd, r"{}_com_clipped_albers.tif".format(basename))
         print(compress_fp)
-        # rst_fp = r'I:\foring_data_of_China_1979-2018\数据整合\Monthly\temp_M01_Mean_20210913.tif'
+        # rst_fp = r'I:\foriaaang_data_of_China_1979-2018\数据整合\Monthly\temp_M01_Mean_20210913.tif'
         # target_fp = r'J:\Data\TempData\temp_M01_Mean_20210913_clip_albers.tif'
-        # target_compressed_fp = r'J:\Data\TempData\temp_M01_Mean_20210913_clip_compressed_albers.tif'
+        # target_compressed_fp aaaaaa= r'J:\Data\TempData\temp_M01_Mean_20210913_clip_compressed_albers.tif'
         
         transform_albers_rst(o_fp, albers_fp)
-        compress(albers_fp, compress_fp)
-        os.remove(albers_fp)
+        # compress(albers_fp, compress_fp)
+        # os.remove(albers_fp)
 
 
 
