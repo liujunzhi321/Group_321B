@@ -19,7 +19,7 @@ from control_file import (CMAP_DICT, EXTENT_VEC_DICT, STAT_CONTROL_DICT)
 
 class WatershedStatsZonal():
     def __init__(self, arg_dict) -> None:
-        self.key_word = 'lakeID'
+        self.key_word = 'LakeID'
         self.rst_fp = arg_dict['rst_fp']
         self.categorical = arg_dict['categorical']
         if self.categorical:
@@ -27,66 +27,25 @@ class WatershedStatsZonal():
             self.cmap = CMAP_DICT[arg_dict['cmap']]
         else:
             # 列表
-            c, w = arg_dict['c_stat_ways'], arg_dict['w_stat_ways']
-            if pd.isna(c):
-                self.c_stat_ways = []
+            self.c_stat_ways, self.w_stat_ways, self.l_stat_ways = arg_dict['c_stat_ways'], arg_dict['w_stat_ways'], arg_dict['l_stat_ways']
+            self.c_stat_ways = self.check_statways(self.c_stat_ways)
+            self.w_stat_ways = self.check_statways(self.w_stat_ways)
+            self.l_stat_ways = self.check_statways(self.l_stat_ways)
+
+
+    def check_statways(self, stat_ways):
+        if pd.isna(stat_ways):
+            stat_ways = []
+        else:
+            if isinstance(stat_ways, list):
+                stat_ways = stat_ways
+            elif isinstance(stat_ways, str):
+                stat_ways = stat_ways.split(',')
             else:
-                if isinstance(c, list):
-                    self.c_stat_ways = c
-                elif isinstance(c, str):
-                    self.c_stat_ways = c.split(',')
-                else:
-                    raise TypeError("'c_stat_ways'须是'list'或'str'")
-            
-            if pd.isna(w):
-                self.w_stat_ways = []
-            else:
-                if isinstance(w, list):
-                    self.w_stat_ways = w
-                elif isinstance(c, str):
-                    self.w_stat_ways = w.split(',')
-                else:
-                    raise TypeError("'c_stat_ways'须是'list'或'str'")
-
-        # self.catchment_vec_fp = r'J:\Data\shapefile\catchment\catchment.shp'
-        # self.watershed_vec_fp = r'J:\Data\shapefile\watershed\watershed.shp'
-
-        # # 将矢量的数据投影坐标系转化为与栅格相同的投影
-        # if platform.system() == "Windows":
-        #     self.temp_rst_fd = r'J:\Data\TempData'
-        # elif platform.system() == 'Linux':
-        #     self.temp_rst_fd = r'/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterAlbers'
-        # fn_albers = '{}_albers.tif'.format(os.path.basename(self.rst_fp).split('.')[0])
-        # self.target_rst_fp = os.path.join(self.temp_rst_fd, fn_albers)
-
-
-    def transform(self, vec_fp):
-        """
-        将矢量数据的坐标系转化为和栅格数据相同的坐标系统。
-        params:
-            vec_fp: 矢量数据的存储路径
-            rst_fp: 栅格数据的存储路径
-            tmp_vec_fp: 坐标系统转换过后的矢量数据的存储路径
-        """
-        vec = gpd.read_file(vec_fp)
-        rst = rioxr.open_rasterio(self.rst_fp)
-        rst_crs = rst.rio.crs
-        vec = vec.to_crs(rst_crs)
-        vec.to_file(self.temp_vec_fp)
-        return
-
-
-    def transform_albers_rst(self,):
-        """
-        将栅格数据的投影转化为Albers等面积投影，以方便比例的统计
-        Params:
-        Return:
-            None
-        """
-        xds = rioxr.open_rasterio(self.rst_fp).rio.reproject('ESRI:102025')
-        xds.rio.to_raster(self.target_rst_fp)
-        # print(xds)
-        return None
+                print(stat_ways)
+                raise TypeError("'c_stat_ways'须是'list'或'str'")
+      
+        return stat_ways
 
     
     def stat_multiattributes(self, vec_fp, attribute_name, stat_ways):
@@ -138,12 +97,17 @@ class WatershedStatsZonal():
 
 
     def set_prefix(self, df, extent):
+        """
+        为变量设置前缀
+        """
         if isinstance(df, pd.DataFrame):
             columns_list = df.columns
             if extent == 'catchment':
-                rename_dict = {col_name: 'C_{}'.format(col_name) for col_name in columns_list}
+                rename_dict = {col_name: 'IC_{}'.format(col_name) for col_name in columns_list}
             elif extent == 'watershed':
-                rename_dict = {col_name: 'W_{}'.format(col_name) for col_name in columns_list}
+                rename_dict = {col_name: 'FC_{}'.format(col_name) for col_name in columns_list}
+            elif extent == 'lake':
+                rename_dict = {col_name: 'Lk_{}'.format(col_name) for col_name in columns_list}
             return df.rename(columns=rename_dict)
         else:
             return None
@@ -152,22 +116,32 @@ class WatershedStatsZonal():
     def stat_main(self, attribute_name):
         c_vec_fp = EXTENT_VEC_DICT['catchment']
         w_vec_fp = EXTENT_VEC_DICT['watershed']
+        l_vec_fp = EXTENT_VEC_DICT['lake']
         if self.categorical:
             catchment_df = self.stat_percent(c_vec_fp, attribute_name)
             watershed_df = self.stat_percent(w_vec_fp, attribute_name)
             return pd.concat([self.set_prefix(catchment_df, 'catchment'), self.set_prefix(watershed_df, 'watershed')], axis=1)
 
         else:
+            # IC
             if len(self.c_stat_ways) >= 1:
                 catchment_df = self.stat_multiattributes(c_vec_fp, attribute_name, self.c_stat_ways)
             else:
                 catchment_df = None
 
+            # FC
             if len(self.w_stat_ways) >= 1:
                 watershed_df = self.stat_multiattributes(w_vec_fp, attribute_name, self.w_stat_ways)
             else:
                 watershed_df = None
-            return pd.concat([self.set_prefix(catchment_df, 'catchment'), self.set_prefix(watershed_df, 'watershed')], axis=1)
+
+            #Lake
+            if len(self.l_stat_ways) >= 1:
+                lake_df = self.stat_multiattributes(l_vec_fp, attribute_name, self.l_stat_ways)
+            else:
+                lake_df = None
+
+            return pd.concat([self.set_prefix(catchment_df, 'catchment'), self.set_prefix(watershed_df, 'watershed'), self.set_prefix(lake_df, 'lake')], axis=1)
         
 
 if __name__ == '__main__':
