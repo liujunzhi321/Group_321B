@@ -1,0 +1,101 @@
+﻿attribute_name,rst_fp,categorical,cmap,stated_type_list,c_stat_ways,w_stat_ways,Unit,
+prec_M01,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M01_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M02,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M02_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M03,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M03_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M04,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M04_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M05,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M05_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M06,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M06_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M07,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M07_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M08,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M08_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M09,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M09_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M10,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M10_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M11,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M11_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_M12,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_M12_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,K,1
+prec_yearly,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/prec_yearly_mean_com_clipped_albers.tif,FALSE,,,"mean,min,max",mean,K,3
+temp_yearly,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_yearly_mean_com_clipped_albers.tif,FALSE,,,mean,mean,mm yr-1,2
+temp_M01,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M01_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M02,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M02_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M03,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M03_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M04,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M04_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M05,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M05_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M06,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M06_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M07,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M07_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M08,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M08_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M09,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M09_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M10,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M10_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M11,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M11_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+temp_M12,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/temp_M12_Mean_20210913_com_clipped_albers.tif,FALSE,,,mean,,mm monthly -1,1
+Elevation,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/tp_extent_dem_albers_com_clipped_albers.tif,FALSE,,,"mean,min,max",mean,m,4
+Slope,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/slope250_albers_com_clipped_albers.tif,FALSE,,,mean,mean,,2
+PET_yr,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_yr_albers_com_clipped_albers.tif,FALSE,,,mean,mean,mm,2
+PET_M01,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_01_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M02,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_02_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M03,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_03_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M04,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_04_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M05,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_05_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M06,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_06_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M07,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_07_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M08,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_08_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M09,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_09_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M10,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_10_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M11,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_11_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+PET_M12,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/et0_12_albers_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_yr,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_yr_com_clipped_albers.tif,FALSE,,,mean,mean,mm,2
+AET_M01,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_1_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M02,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_2_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M03,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_3_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M04,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_4_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M05,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_5_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M06,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_6_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M07,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_7_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M08,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_8_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M09,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_9_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M10,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_10_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M11,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_11_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+AET_M12,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/aet_12_com_clipped_albers.tif,FALSE,,,mean,,mm,1
+Aridity_Index,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/ai_et0_albers_com_clipped_albers.tif,FALSE,,,mean,mean,,2
+TP_LC2015_class,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/tpluc20151_com_clipped_albers.tif,FALSE,,,majority,,class(10),1
+TP_LC2015_extent,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/tpluc20151_com_clipped_albers.tif,TRUE,cmap_lu_tp,All,,,class(10),20
+VegType_class,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/vegtype_5min_com_clipped_albers.tif,FALSE,,,majority,,class(15),1
+VegType_extent,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/vegtype_5min_com_clipped_albers.tif,TRUE,VegType_cmap,All,,,class(15),30
+cropland,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/Cropland2000_5m_com_clipped_albers.tif,FALSE,,,mean,mean,%,2
+Permafrost,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/permafrost_com_clipped_albers.tif,FALSE,,,mean,mean,,2
+wetland_class,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/glwd_3_ProjectRaster11_com_clipped_albers.tif,FALSE,,,majority,,%,
+wetland_extent,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/glwd_3_ProjectRaster11_com_clipped_albers.tif,TRUE,WetlandType_cmap,All,,,,
+SWC_M01,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_1_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M02,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_2_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M03,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_3_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M04,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_4_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M05,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_5_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M06,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_6_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M07,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_7_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M08,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_8_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M09,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_9_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M10,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_10_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M11,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_11_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_M12,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_fr_12_com_clipped_albers.tif,FALSE,,,mean,,percent,
+SWC_YR,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/swc_yr_com_clipped_albers.tif,FALSE,,,mean,mean,percent,
+Lithological_class,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/glim_com_clipped_albers.tif,FALSE,,,majority,,classes(16),
+soil_erosion,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/XDA200402022-QZGY2015E_com_clipped_albers.tif,FALSE,,,mean,mean,,
+Population_count,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/gpw_v4_population_count_rev11_2010_30_sec_com_clipped_albers.tif,FALSE,,,mean,mean,,
+Population_density,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/gpw_v4_population_density_rev11_2010_30_sec_com_clipped_albers.tif,FALSE,,,mean,mean,,
+Urban_extent,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/GHS_SMOD_POP2015_GLOBE_R2019A_54009_1K_V2_0_com_clipped_albers.tif,TRUE,Urban_cmap,All,,,,
+Nighttime_light,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/F182013.v4c_web.stable_lights.avg_vis_com_clipped_albers.tif,FALSE,,,mean,mean,,
+Road_density,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/road_density_com_clipped_albers.tif,FALSE,,,mean,mean,,
+Human_footprint_1993,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/HFP1993_com_clipped_albers.tif,FALSE,,,mean,mean,,
+Human_footprint_2009,/share/home/liujunzhi/liujunzhi/Albert/Data/tempData/RasterClipedAlbers/HFP2009_com_clipped_albers.tif,FALSE,,,mean,mean,,
+Area,,,,,,,km2,
+Galcier_extent,,,,,,,1,
+Protect_area_extent,,,,,,,1,
+bdod_0-5cm_mean,,,,,,,,
+cec_0-5cm_mean,,,,,,,,
+cfvo_0-5cm_mean,,,,,,,,
+clay_0-5cm_mean,,,,,,,,
+nitrogen_0-5cm_mean,,,,,,,,
+ocd_0-5cm_mean,,,,,,,,
+ocs_0-30cm_mean,,,,,,,,
+phh2o_0-5cm_mean,,,,,,,,
+sand_0-5cm_mean,,,,,,,,
+silt_0-5cm_mean,,,,,,,,
+soc_0-5cm_mean,,,,,,,,
+Relief_5_5_mean,,,,,,,,
